@@ -6,7 +6,7 @@
 /*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:30:19 by jporta            #+#    #+#             */
-/*   Updated: 2021/11/11 19:06:46 by jporta           ###   ########.fr       */
+/*   Updated: 2021/11/16 14:18:54 by jporta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ int	key_hook(int keycode, t_vars *vars)
 {
 	if (keycode == 53)
 	{
-		printf ("Done!\n");
-		exit (1);
+		ft_free(vars);
+		printf("Done!\n");
+		exit(1);
 	}
 	if (keycode == 13 || keycode == 0 || keycode == 1
 		|| keycode == 2)
