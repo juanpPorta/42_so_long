@@ -6,14 +6,16 @@
 /*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:09:35 by jporta            #+#    #+#             */
-/*   Updated: 2021/11/16 14:24:22 by jporta           ###   ########.fr       */
+/*   Updated: 2021/11/17 15:30:59 by jporta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-void	cerrar(int keycode, t_vars *vars)
+int	cerrar(int keycode, t_vars *vars)
 {
+	ft_free(vars);
 	printf ("Done!\n");
 	exit (EXIT_SUCCESS);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 17:03:57 by jporta            #+#    #+#             */
-/*   Updated: 2021/11/11 17:15:02 by jporta           ###   ########.fr       */
+/*   Updated: 2021/11/17 15:27:23 by jporta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	ft_checkfin(t_vars *vars)
 {
 	if (vars->map[vars->y][vars->x] == vars->map[vars->yD][vars->xD])
 	{
+		ft_free(vars);
 		printf ("Done!\n");
 		exit (1);
 	}
