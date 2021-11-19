@@ -1,4 +1,4 @@
-CC		= gcc
+CC		= gcc -Wall -Wextra -Werror
 NAME	= so_long
 MINILIB	= -L mlx -l mlx -framework OpenGL -framework AppKit
 HEADER	= so_long.h

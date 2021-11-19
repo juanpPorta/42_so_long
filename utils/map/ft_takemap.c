@@ -6,7 +6,7 @@
 /*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 17:49:47 by jporta            #+#    #+#             */
-/*   Updated: 2021/11/11 19:12:26 by jporta           ###   ########.fr       */
+/*   Updated: 2021/11/19 17:54:55 by jporta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char	*ft_pickstr(char *str)
 {
 	char	*res;
 	int		i;
-	size_t	size;
+	int		size;
 
 	i = -1;
 	size = ft_strlen(str);

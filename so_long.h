@@ -6,7 +6,7 @@
 /*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 15:27:35 by jporta            #+#    #+#             */
-/*   Updated: 2021/11/17 15:31:12 by jporta           ###   ########.fr       */
+/*   Updated: 2021/11/19 17:55:22 by jporta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	ft_checkingmap(t_vars vars);
 void	ft_printsquare(t_vars *vars, size_t j, size_t o, char *imgname);
 void	ft_checkdraw(char **map, t_vars *vars);
 void	set_player(t_vars *p, size_t y, size_t x);
-int		cerrar(int keycode, t_vars *vars);
+int		cerrar(t_vars *vars);
 /* control */
 void	ft_error(int error);
 void	ft_free(t_vars *vars);

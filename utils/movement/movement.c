@@ -6,7 +6,7 @@
 /*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 16:28:06 by jporta            #+#    #+#             */
-/*   Updated: 2021/11/12 15:42:07 by jporta           ###   ########.fr       */
+/*   Updated: 2021/11/19 17:56:19 by jporta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_escape(t_vars *vars)
 	return (0);
 }
 
-int	ft_checkobj(t_vars *vars, int numero)
+int	ft_checkobj(t_vars *vars)
 {
 	if (vars->map[vars->y][vars->x] == 'C')
 	{
@@ -49,21 +49,21 @@ void	ft_checkmove(t_vars *vars, int numero)
 {
 	if (numero == 13 && (vars->map[vars->y][vars->x] == '1'
 		|| (vars->map[vars->y][vars->x] == 'E'
-		&& ft_checkobj(vars, numero) == 0)))
+		&& ft_checkobj(vars) == 0)))
 		vars->y += 1;
 	else if (numero == 1 && (vars->map[vars->y][vars->x] == '1'
 		|| (vars->map[vars->y][vars->x] == 'E'
-		&& ft_checkobj(vars, numero) == 0)))
+		&& ft_checkobj(vars) == 0)))
 		vars->y -= 1;
 	else if (numero == 0 && (vars->map[vars->y][vars->x] == '1'
 		|| (vars->map[vars->y][vars->x] == 'E'
-		&& ft_checkobj(vars, numero) == 0)))
+		&& ft_checkobj(vars) == 0)))
 		vars->x += 1;
 	else if (numero == 2 && (vars->map[vars->y][vars->x] == '1'
 		|| (vars->map[vars->y][vars->x] == 'E'
-		&& ft_checkobj(vars, numero) == 0)))
+		&& ft_checkobj(vars) == 0)))
 		vars->x -= 1;
-	ft_checkobj(vars, numero);
+	ft_checkobj(vars);
 }
 
 void	ft_move(int numero, t_vars *vars)

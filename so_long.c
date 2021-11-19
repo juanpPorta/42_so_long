@@ -6,7 +6,7 @@
 /*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 15:29:18 by jporta            #+#    #+#             */
-/*   Updated: 2021/11/16 14:06:52 by jporta           ###   ########.fr       */
+/*   Updated: 2021/11/19 17:56:31 by jporta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,15 @@ int	ft_checkfile(const char *fichero)
 	return (0);
 }
 
-void	ft_init(t_vars vars)
+void	ft_init(t_vars *vars)
 {
-	vars.mlx = NULL;
-	vars.win = NULL;
-	vars.x = 0;
-	vars.map = NULL;
-	vars.exit = 0;
-	vars.C = 0;
-	vars.count = 0;
+	vars->mlx = NULL;
+	vars->win = NULL;
+	vars->x = 0;
+	vars->map = NULL;
+	vars->exit = 0;
+	vars->C = 0;
+	vars->count = 0;
 }
 
 int	main(int argc, const char **argv)
@@ -45,7 +45,7 @@ int	main(int argc, const char **argv)
 	size_t	h;
 
 	i = 0;
-	ft_init(vars);
+	ft_init(&vars);
 	if (argc != 2 || ft_checkfile(argv[1]) != 1)
 		ft_error(1);
 	vars.map = ft_makemap(argv[1]);
